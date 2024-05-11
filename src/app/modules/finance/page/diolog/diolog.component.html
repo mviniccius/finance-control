@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Nova transação</h1>
+<div mat-dialog-actions>
+  <form method="post">
+    <input type="text" name="description">
+    <input type="number" name ="price">
+  </form>
+  <button mat-button>Entrada</button>
+  <button mat-button>Saída</button>
+
+  <button mat-button (click)="cancel()">No Thanks</button>
+</div>

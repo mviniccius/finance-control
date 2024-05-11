@@ -1,0 +1,49 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+/>
+
+<p>
+  <mat-toolbar color="primary">
+    <span>MG Money</span>
+    <span class="tool-spacer"></span>
+    <button mat-button (click)="openDialog()">Nova transação</button>
+  </mat-toolbar>
+</p>
+
+<div class="cards">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Entradas</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <span class="material-symbols-outlined"> payments </span>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p>R$ 4.000,00</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Saidas</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <span class="material-symbols-outlined"> mintmark </span>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content> R$ 4.000,00 </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Total</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <span class="material-symbols-outlined"> attach_money </span>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content> R$ 4.000,00 </mat-card-content>
+  </mat-card>
+</div>
