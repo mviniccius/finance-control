@@ -1,5 +1,5 @@
 import { MatDialog } from '@angular/material/dialog';
-import { balanceDatas } from './../../../../models/interface/balance';
+import { Conta, Transacao, balanceDatas } from './../../../../models/interface/balance';
 import { FinaceService } from './../../services/finace.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { DiologComponent } from '../diolog/diolog.component';
@@ -10,7 +10,7 @@ import { DiologComponent } from '../diolog/diolog.component';
   styleUrls: [],
 })
 export class FinanceHomeComponent implements OnInit {
-  @Input() balanceInput!: balanceDatas[];
+  balanceInput!: Conta;
 
 
   constructor(
