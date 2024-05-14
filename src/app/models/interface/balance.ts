@@ -23,3 +23,14 @@ export interface Transacao{
     }
   ]
 }
+
+export interface TransacaoPost{
+  transacoes:[
+    {
+      descricao: string,
+      preco: number,
+      categoria: string,
+      tipoTransacao: string,
+    }
+  ]
+}

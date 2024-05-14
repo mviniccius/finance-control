@@ -4,7 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-diolog',
   templateUrl: './diolog.component.html',
-  styleUrls: [],
+  styleUrls: ['./diolog.component.scss'],
 })
 export class DiologComponent {
 

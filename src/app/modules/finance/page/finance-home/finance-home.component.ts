@@ -1,7 +1,7 @@
 import { MatDialog } from '@angular/material/dialog';
-import { Conta, Transacao, balanceDatas } from './../../../../models/interface/balance';
+import { Conta, TransacaoPost } from './../../../../models/interface/balance';
 import { FinaceService } from './../../services/finace.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DiologComponent } from '../diolog/diolog.component';
 
 @Component({
@@ -12,11 +12,10 @@ import { DiologComponent } from '../diolog/diolog.component';
 export class FinanceHomeComponent implements OnInit {
   balanceInput!: Conta;
 
+  //declaracao os dados de entrada
+  transactionDataPost!: TransacaoPost[];
 
-  constructor(
-    private finaceService: FinaceService,
-    public dialog: MatDialog
-  ) {}
+  constructor(private finaceService: FinaceService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.finaceService;
@@ -25,7 +24,7 @@ export class FinanceHomeComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DiologComponent, {
-      width: '250px',
+      width: '350px',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -42,4 +41,5 @@ export class FinanceHomeComponent implements OnInit {
       error: (err) => console.log(err),
     });
   }
+
 }
