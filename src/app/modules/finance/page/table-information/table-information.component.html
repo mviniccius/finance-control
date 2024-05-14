@@ -1,5 +1,5 @@
 <p>table-information works!</p>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8"  *ngIf="balanceInput">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -7,7 +7,7 @@
   <!-- Position Column -->
   <ng-container matColumnDef="position">
     <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> <p>Aqui vem os dados{{element.position}}</p> </td>
+    <td mat-cell *matCellDef="let element"> <p>Aqui vem os dados{{balanceInput.id}}</p> </td>
   </ng-container>
 
   <!-- Name Column -->

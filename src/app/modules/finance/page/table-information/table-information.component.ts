@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Conta, Transacao, balanceDatas } from './../../../../models/interface/balance';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-table-information',
@@ -8,7 +9,12 @@ import { Component } from '@angular/core';
 export class TableInformationComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+
+
+  @Input() balanceInput: Transacao
 }
+
+
   export interface PeriodicElement {
     name: string;
     position: number;
