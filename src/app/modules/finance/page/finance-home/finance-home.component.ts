@@ -10,10 +10,10 @@ import { DiologComponent } from '../diolog/diolog.component';
   styleUrls: [],
 })
 export class FinanceHomeComponent implements OnInit {
-  balanceInput!: Conta;
+  balanceInput: Conta;
 
   //declaracao os dados de entrada
-  transactionDataPost!: TransacaoPost[];
+  transactionDataPost: TransacaoPost[];
 
   constructor(private finaceService: FinaceService, public dialog: MatDialog) {}
 
