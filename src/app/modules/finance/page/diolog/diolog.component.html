@@ -1,5 +1,5 @@
 <h1 mat-dialog-title class="dialog-title">Nova transação</h1>
-<div mat-dialog-actions class="container">
+<div mat-dialog-actions>
   <form #transactionForm="ngForm" method="post" class="dialog-container">
     <div class="input-field">
       <input type="text" name="description" placeholder="Descrição" />
@@ -20,12 +20,22 @@
     Saída
   </button>
 </div>
-<div mat-dialog-actions class="full-width-button">
-  <button
-    mat-raised-button
-    style="background-color: #db4760; color: white"
-    (click)="cancel()"
-  >
-    No Thanks
-  </button>
+<div mat-dialog-actions class="button-group">
+
+    <button
+      mat-raised-button
+      style="background-color: #db4760; color: white"
+      (click)="cancel()"
+    >
+      No Thanks
+    </button>
+
+    <button
+      mat-raised-button
+      style="background-color: #007fff; color: white"
+      (click)="cancel()"
+    >
+      Salvar <mat-icon class="mat-18">save</mat-icon>
+    </button>
+
 </div>
