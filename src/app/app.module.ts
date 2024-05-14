@@ -12,6 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card'
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { FinanceHomeComponent } from './modules/finance/page/finance-home/financ
 
 import { BarraInicialComponent } from './modules/finance/page/barra-inicial/barra-inicial.component';
 import { DiologComponent } from './modules/finance/page/diolog/diolog.component';
+import { TableInformationComponent } from './modules/finance/page/table-information/table-information.component';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { DiologComponent } from './modules/finance/page/diolog/diolog.component'
     FinanceHomeComponent,
     BarraInicialComponent,
     DiologComponent,
+    TableInformationComponent,
 
   ],
   imports: [
@@ -47,7 +50,8 @@ import { DiologComponent } from './modules/finance/page/diolog/diolog.component'
     MatSidenavModule,
     MatIconModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
