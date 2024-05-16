@@ -1,8 +1,9 @@
+import { tipoTransacao } from './../../../../models/enum/tiposervico';
 import { TransacaoPayload } from './../../../../models/interface/balance';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { tipoTransacao } from 'src/app/models/enum/tiposervico';
+
 
 @Component({
   selector: 'app-diolog',
@@ -26,9 +27,9 @@ export class DiologComponent {
   constructor(public dialogRef: MatDialogRef<DiologComponent>, private formBuild: FormBuilder) {}
 
   //criar funcao para selecionar o tipo de transacao por botoes
-  submitDataTipoTransacao(tipoTransacao: string){
-    this.envioDados.tipoTransacao = tipoTransacao;
-    this.dialogRef.close(this.envioDados)
+  setTipoTransacao(tipo: tipoTransacao){
+    this.formTransacao.get('tipoTransacao')?.setValue(tipo);
+    console.log(this.formTransacao.value)
   }
 
   cancel(): void {
