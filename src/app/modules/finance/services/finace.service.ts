@@ -8,11 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class FinaceService {
 
-  private readonly API = 'https://server-node-transacao.onrender.com/transacao'
+    private readonly API = 'https://server-node-transacao.onrender.com/transacao'
 
     constructor(private http: HttpClient) { }
 
     getBalance(): Observable<any>{
       return this.http.get(this.API);
+    }
+
+    postData(data:any): Observable<any>{
+      return this.http.post(this.API, data);
     }
 }

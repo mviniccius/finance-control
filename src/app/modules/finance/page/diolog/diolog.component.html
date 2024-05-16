@@ -2,40 +2,33 @@
 <div mat-dialog-actions>
   <form #transactionForm="ngForm" method="post" class="dialog-container">
     <div class="input-field">
-      <input type="text" name="description" placeholder="Descrição" />
+      <input type="text" name="description" placeholder="Descrição" [(ngModel)]="envioDados.descricao" />
     </div>
     <div class="input-field">
-      <input type="number" name="price" placeholder="Preço" />
+      <input type="number" name="price" placeholder="Preço" [(ngModel)]="envioDados.preco" />
     </div>
     <div class="input-field">
-      <input type="text" name="category" placeholder="Categoria" />
+      <input type="text" name="category" placeholder="Categoria" [(ngModel)]="envioDados.categoria" />
     </div>
+
   </form>
 </div>
 <div mat-dialog-actions class="button-group">
-  <button mat-raised-button style="background-color: #4169e1; color: white">
+  <button mat-raised-button (click)="submitDataTipoTransacao('E')" style="background-color: #4169e1; color: white">
     Entrada
   </button>
-  <button mat-raised-button style="background-color: #4169e1; color: white">
+  <button mat-raised-button (click)="submitDataTipoTransacao('S')" style="background-color: #4169e1; color: white">
     Saída
   </button>
 </div>
 <div mat-dialog-actions class="button-group">
 
-    <button
-      mat-raised-button
-      style="background-color: #db4760; color: white"
-      (click)="cancel()"
-    >
-      No Thanks
-    </button>
+  <button mat-raised-button style="background-color: #db4760; color: white" (click)="cancel()">
+    No Thanks
+  </button>
 
-    <button
-      mat-raised-button
-      style="background-color: #007fff; color: white"
-      (click)="cancel()"
-    >
-      Salvar <mat-icon class="mat-18">save</mat-icon>
-    </button>
+  <button mat-raised-button style="background-color: #007fff; color: white">
+    Salvar
+  </button>
 
 </div>

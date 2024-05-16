@@ -1,5 +1,5 @@
 import { MatDialog } from '@angular/material/dialog';
-import { balanceDatas } from './../../../../models/interface/balance';
+import { TransacaoPayload, balanceDatas } from './../../../../models/interface/balance';
 import { FinaceService } from './../../services/finace.service';
 import { Component, OnInit } from '@angular/core';
 import { DiologComponent } from '../diolog/diolog.component';
@@ -13,7 +13,8 @@ export class FinanceHomeComponent implements OnInit {
   balanceInput: balanceDatas;
 
   //declaracao os dados de entrada
-  transactionDataPost: TransacaoPost[];
+  transactionDataPost: TransacaoPayload;
+
 
   constructor(private finaceService: FinaceService, public dialog: MatDialog) {}
 
@@ -27,7 +28,10 @@ export class FinanceHomeComponent implements OnInit {
       width: '350px',
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
+    dialogRef.afterClosed().subscribe((result: TransacaoPayload) => {
+      if(result){
+        console.log("Os dados vieram: ", result);
+      }
       console.log('The dialog was closed');
     });
   }

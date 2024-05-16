@@ -1,3 +1,4 @@
+import { TransacaoPayload } from './../../../../models/interface/balance';
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -8,12 +9,18 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class DiologComponent {
 
-constructor(
+  envioDados: TransacaoPayload  //declaracao da interface que vai enviar os dados
 
-  public dialogRef: MatDialogRef<DiologComponent>
-){}
+  constructor(public dialogRef: MatDialogRef<DiologComponent>) {}
+
+  //criar funcao para selecionar o tipo de transacao por botoes
+  submitDataTipoTransacao(tipoTransacao: string){
+    this.envioDados.tipoTransacao = tipoTransacao;
+    this.dialogRef.close(this.envioDados)
+  }
 
   cancel(): void {
     this.dialogRef.close();
   }
+
 }
