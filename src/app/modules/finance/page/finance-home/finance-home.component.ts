@@ -1,5 +1,5 @@
 import { MatDialog } from '@angular/material/dialog';
-import { Conta, TransacaoPost, balanceDatas } from './../../../../models/interface/balance';
+import { balanceDatas } from './../../../../models/interface/balance';
 import { FinaceService } from './../../services/finace.service';
 import { Component, OnInit } from '@angular/core';
 import { DiologComponent } from '../diolog/diolog.component';
