@@ -16,7 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FinanceHomeComponent } from './modules/finance/page/finance-home/finance-home.component';
@@ -40,6 +40,7 @@ import { TableInformationComponent } from './modules/finance/page/table-informat
     AppRoutingModule,
     MatSlideToggleModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatListModule,
