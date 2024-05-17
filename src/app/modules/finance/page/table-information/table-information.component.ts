@@ -8,9 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TableInformationComponent implements OnInit{
 
-  @Input() balanceInputFilho: Transacao
+  @Input() balanceInputFilho: balanceDatas
 
   ngOnInit(): void {
-    console.log("Informações do DumbComponent", this.balanceInputFilho.categoria);
+    console.log("Informações do DumbComponent", this.balanceInputFilho.transacao);
   }
 }

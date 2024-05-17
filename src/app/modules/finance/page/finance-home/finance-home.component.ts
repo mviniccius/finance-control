@@ -14,7 +14,7 @@ export class FinanceHomeComponent implements OnInit {
   //utilizado para receber todas as informações da API
   balanceInput: balanceDatas;
 
-  transacoes: Transacao
+
   //declaracao os dados de entrada
   transactionDataPost: TransacaoPayload;
 
@@ -42,7 +42,7 @@ export class FinanceHomeComponent implements OnInit {
     this.finaceService.getBalance().subscribe({
       next: (response) => {
         this.balanceInput = response;
-        console.log(this.balanceInput);
+        console.log('Meu GET',this.balanceInput);
       },
       error: (err) => console.log(err),
     });

@@ -1,2 +1,19 @@
 <p>table-information works!</p>
-<p>{{balanceInputFilho.categoria}}</p>
+
+<div *ngFor="let transacao of balanceInputFilho.transacao">
+  <p>{{transacao.categoria}}</p>
+  <p>{{transacao.preco}}</p>
+  <p>{{transacao.categoria}}</p>
+  <p>{{transacao.dataTransacao| date:'dd/MM/yyyy'}}</p>
+  <br><br><br><br><br><br>
+</div>
+
+
+<div class="pai">
+  <div class="filho">
+    <p>1</p>
+  </div>
+  <div class="filho">
+    <p>2</p>
+  </div>
+</div>

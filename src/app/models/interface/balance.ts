@@ -1,6 +1,6 @@
 export interface balanceDatas {
   conta: Conta;
-  transacoes: Transacao;
+  transacao: Transacao[];
 }
 
 export interface Conta {
@@ -15,7 +15,7 @@ export interface Transacao {
   preco: number;
   categoria: string;
   tipoTransacao: string;
-  dataTransacao: string;
+  dataTransacao: Date;
 }
 
 export interface TransacaoPayload {
