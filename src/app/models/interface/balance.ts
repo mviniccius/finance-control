@@ -1,6 +1,6 @@
 export interface balanceDatas {
   conta: Conta;
-  transacoes: Transacao[];
+  transacoes: Transacao;
 }
 
 export interface Conta {

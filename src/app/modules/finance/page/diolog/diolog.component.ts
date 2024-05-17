@@ -1,5 +1,5 @@
 import { tipoTransacao } from './../../../../models/enum/tiposervico';
-import { TransacaoPayload } from './../../../../models/interface/balance';
+import { Transacao, TransacaoPayload } from './../../../../models/interface/balance';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -14,7 +14,6 @@ export class DiologComponent {
   @Output() transacoEnvio = new EventEmitter<TransacaoPayload>();
 
   envioDados: TransacaoPayload  //declaracao da interface que vai enviar os dados
-
   formTransacao: FormGroup = this.formBuild.group({
       descricao:['', Validators.required],
       preco:['',Validators.required],

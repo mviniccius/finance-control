@@ -1,5 +1,5 @@
 import { MatDialog } from '@angular/material/dialog';
-import { TransacaoPayload, balanceDatas } from './../../../../models/interface/balance';
+import { Transacao, TransacaoPayload, balanceDatas } from './../../../../models/interface/balance';
 import { FinaceService } from './../../services/finace.service';
 import { Component, OnInit } from '@angular/core';
 import { DiologComponent } from '../diolog/diolog.component';
@@ -10,11 +10,13 @@ import { DiologComponent } from '../diolog/diolog.component';
   styleUrls: [],
 })
 export class FinanceHomeComponent implements OnInit {
+
+  //utilizado para receber todas as informações da API
   balanceInput: balanceDatas;
 
+  transacoes: Transacao
   //declaracao os dados de entrada
   transactionDataPost: TransacaoPayload;
-
 
   constructor(private finaceService: FinaceService, public dialog: MatDialog) {}
 
