@@ -1,14 +1,23 @@
 <p>table-information works!</p>
-<button mat-raised-button color="primary" *ngIf="mostrarButton" (click)="mostrarMais()">Mostrar mais</button>
-<button mat-raised-button color="accent" *ngIf="!mostrarButton" (click)="mostrarMenos()"> Mostrar menos</button>
+
+<div class="menu-botoes-pai">
+  <div>
+    <span class="material-symbols-outlined" style="cursor: pointer;"(click)="ordernarCrescente()">arrow_upward</span>
+    <span class="material-symbols-outlined" style="cursor: pointer;"(click)="ordenarDecrescente()">arrow_downward</span>
+    <button mat-raised-button color="primary" *ngIf="mostrarButton" (click)="mostrarMais()">Mostrar mais</button>
+    <button mat-raised-button color="accent" *ngIf="!mostrarButton" (click)="mostrarMenos()"> Mostrar menos</button>
+  </div>
+</div>
 
 
 <div *ngFor="let transacao of balanceInputFilho.transacao | slice:0:quantidadeTransacao">
-  <p>{{transacao.categoria}}</p>
-  <p>{{transacao.preco}}</p>
-  <p>{{transacao.categoria}}</p>
-  <p>{{transacao.dataTransacao| date:'dd/MM/yyyy'}}</p>
-  <br><br><br><br><br><br>
+
+    <p>{{transacao.categoria}}</p>
+    <p>{{transacao.preco}}</p>
+    <p>{{transacao.categoria}}</p>
+    <p>{{transacao.dataTransacao| date:'dd/MM/yyyy'}}</p>
+
+
 </div>
 
 

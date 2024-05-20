@@ -16,6 +16,7 @@ export class TableInformationComponent implements OnInit{
 
   ngOnInit(): void {
     console.log("Informações do DumbComponent", this.balanceInputFilho.transacao);
+    this.ordenarDecrescente();
   }
 
   mostrarMais(): void{
@@ -28,4 +29,11 @@ export class TableInformationComponent implements OnInit{
     this.mostrarButton = !this.mostrarButton;
   }
 
+  ordenarDecrescente(): void{
+    this.balanceInputFilho.transacao.sort((a, b) => b.id - a.id);
+  }
+
+  ordernarCrescente(): void{
+    this.balanceInputFilho.transacao.sort((a, b)=> a.id - b.id);
+  }
 }
