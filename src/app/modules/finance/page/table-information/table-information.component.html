@@ -1,4 +1,7 @@
 <p>table-information works!</p>
+<button mat-raised-button color="primary" *ngIf="mostrarButton" (click)="mostrarButton = ! mostrarButton">Mostrar mais</button>
+<button mat-raised-button color="accent" *ngIf="!mostrarButton" (click)="mostrarButton = ! mostrarButton"> Mostrar menos</button>
+
 
 <div *ngFor="let transacao of balanceInputFilho.transacao">
   <p>{{transacao.categoria}}</p>
