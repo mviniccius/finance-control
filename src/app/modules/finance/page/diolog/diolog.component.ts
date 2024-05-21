@@ -1,5 +1,5 @@
 import { tipoTransacao } from './../../../../models/enum/tiposervico';
-import { Transacao, TransacaoPayload } from './../../../../models/interface/balance';
+import { TransacaoPayload } from './../../../../models/interface/balance';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
