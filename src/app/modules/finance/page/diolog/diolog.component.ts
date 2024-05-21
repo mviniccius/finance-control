@@ -1,3 +1,4 @@
+import { FinaceService } from './../../services/finace.service';
 import { tipoTransacao } from './../../../../models/enum/tiposervico';
 import { TransacaoPayload } from './../../../../models/interface/balance';
 import { Component, EventEmitter, Output } from '@angular/core';
@@ -23,13 +24,28 @@ export class DiologComponent {
 
   tipoTransacao = tipoTransacao;
 
-  constructor(public dialogRef: MatDialogRef<DiologComponent>, private formBuild: FormBuilder) {}
+  constructor(public dialogRef: MatDialogRef<DiologComponent>, private formBuild: FormBuilder, private finacePost: FinaceService) {}
 
   //criar funcao para selecionar o tipo de transacao por botoes
   setTipoTransacao(tipo: tipoTransacao){
     this.formTransacao.get('tipoTransacao')?.setValue(tipo);
-    console.log(this.formTransacao.value)
+    console.log('funcao set transacao', this.formTransacao.value)
   }
+
+  salvar(): void{
+    if(this.formTransacao.valid){
+      this.finacePost.postData(this.formTransacao.value).subscribe({
+        next: (res)=>{
+          console.log('Dados enviados corretamente!', res);
+          this.dialogRef.close();
+        },
+        error:(err)=>{
+          console.error('Erro ao enviar dados', err);
+        }
+      })
+    }
+  }
+
 
   cancel(): void {
     this.dialogRef.close();

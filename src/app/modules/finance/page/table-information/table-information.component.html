@@ -15,7 +15,7 @@
   <table>
     <tbody>
       <tr>
-        <td>{{transacao.categoria}}</td>
+        <td>{{transacao.descricao}}</td>
         <td [ngClass]="{'entrada': transacao.tipoTransacao === 'E', 'saida':transacao.tipoTransacao==='S'}">{{transacao.preco | currency:'BRL'}}</td>
         <td>{{transacao.categoria}}</td>
         <td>{{transacao.dataTransacao | date:'dd/MM/yyyy'}}</td>

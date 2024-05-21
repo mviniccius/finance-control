@@ -34,7 +34,7 @@ export class FinanceHomeComponent implements OnInit {
       if(result){
         console.log("Os dados vieram: ", result);
       }
-      console.log('The dialog was closed');
+      console.log('The dialog was closed', result);
     });
   }
 
