@@ -1,3 +1,4 @@
+import { tipoTransacao } from './../../../../models/enum/tiposervico';
 import { balanceDatas } from './../../../../models/interface/balance';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -9,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TableInformationComponent implements OnInit{
 
   @Input() balanceInputFilho: balanceDatas
+  tipoTransacao: tipoTransacao
 
   mostrarButton = true;
 

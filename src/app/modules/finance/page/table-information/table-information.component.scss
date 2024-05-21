@@ -15,12 +15,36 @@
 }
 
 .menu-botoes-pai{
-  background-color: pink;
+
   display: flex;
   justify-content: end;
   padding: 2rem;
 }
 
-div p{
-  background-color: grey;
+
+table {
+  width: 80%;
+  border-collapse: collapse; /* As bordas das células são colapsadas em uma única borda */
+}
+.tabela{
+  padding-top: 2rem;
+  display: flex;
+
+  justify-content: center;
+}
+
+td {
+  color: white;
+  background-color: #3f51b5;
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 8px;
+  max-width: 15px;
+}
+
+.entrada{
+  background-color: #007ff4;
+}
+.saida{
+  background-color: #cc283d;
 }

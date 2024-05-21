@@ -10,22 +10,35 @@
 </div>
 
 
-<div *ngFor="let transacao of balanceInputFilho.transacao | slice:0:quantidadeTransacao">
+<div *ngFor="let transacao of balanceInputFilho.transacao | slice:0:quantidadeTransacao" class="tabela">
 
-    <p>{{transacao.categoria}}</p>
+  <table>
+    <tbody>
+      <tr>
+        <td>{{transacao.categoria}}</td>
+        <td [ngClass]="{'entrada': transacao.tipoTransacao === 'E', 'saida':transacao.tipoTransacao==='S'}">{{transacao.preco | currency:'BRL'}}</td>
+        <td>{{transacao.categoria}}</td>
+        <td>{{transacao.dataTransacao | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+    <!-- <p>{{transacao.categoria}}</p>
     <p>{{transacao.preco}}</p>
     <p>{{transacao.categoria}}</p>
-    <p>{{transacao.dataTransacao| date:'dd/MM/yyyy'}}</p>
+    <p>{{transacao.dataTransacao| date:'dd/MM/yyyy'}}</p> -->
 
 
 </div>
 
 
-<div class="pai">
+<!-- <div class="pai">
   <div class="filho">
     <p>1</p>
   </div>
   <div class="filho">
     <p>2</p>
   </div>
-</div>
+</div> -->
