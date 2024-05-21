@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card'
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,6 +54,8 @@ import { TableInformationComponent } from './modules/finance/page/table-informat
     MatCardModule,
     MatDialogModule,
     MatTableModule,
+    MatChipsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

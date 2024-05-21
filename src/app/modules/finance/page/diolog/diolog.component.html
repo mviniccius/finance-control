@@ -12,22 +12,29 @@
     </div>
 
     <div mat-dialog-actions class="button-group">
-      <button mat-raised-button (click)="setTipoTransacao(tipoTransacao.ENTRADA)"
+      <div>
+      <mat-chip-listbox aria-label="Fish selection" class="button">
+
+        <mat-chip-option color="primary" (click)="setTipoTransacao(tipoTransacao.ENTRADA)">Entrada</mat-chip-option>
+        <mat-chip-option color="warn" (click)="setTipoTransacao(tipoTransacao.SAIDA)">Saida</mat-chip-option>
+      </mat-chip-listbox>
+      <!-- <button mat-raised-button (click)="setTipoTransacao(tipoTransacao.ENTRADA)"
         style="background-color: #4169e1; color: white" >
         Entrada
       </button>
       <button mat-raised-button (click)="setTipoTransacao(tipoTransacao.SAIDA)"
         style="background-color: #4169e1; color: white">
         Saída
-      </button>
+      </button> -->
+    </div>
     </div>
 
     <div mat-dialog-actions class="button-group">
-      <button mat-raised-button style="background-color: #db4760; color: white" (click)="cancel()">
+      <button mat-raised-button color="accent" (click)="cancel()">
         No Thanks
       </button>
 
-      <button mat-raised-button style="background-color: #007fff; color: white" (click)="salvar()">
+      <button mat-raised-button  (click)="salvar()" [disabled]="!formTransacao.valid">
         Salvar
       </button>
 
