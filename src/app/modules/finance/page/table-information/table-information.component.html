@@ -1,5 +1,6 @@
 <p>table-information works!</p>
 
+<div class="area-infos">
 <div class="menu-botoes-pai">
   <div>
     <span class="material-symbols-outlined" style="cursor: pointer;"(click)="ordernarCrescente()">arrow_upward</span>
@@ -8,7 +9,7 @@
     <button mat-raised-button color="accent" *ngIf="!mostrarButton" (click)="mostrarMenos()"> Mostrar menos</button>
   </div>
 </div>
-
+</div>
 
 <div *ngFor="let transacao of balanceInputFilho.transacao | slice:0:quantidadeTransacao" class="tabela">
 

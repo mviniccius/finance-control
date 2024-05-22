@@ -14,17 +14,26 @@
   size: 125px;
 }
 
+.area-infos{
+  background-color: #007ff4;
+  display: block;
+  justify-content: flex-end;
+}
+
+
 .menu-botoes-pai{
 
   display: flex;
   justify-content: end;
   padding: 2rem;
+
 }
 
 
 table {
-  width: 80%;
+  width: 60%;
   border-collapse: collapse; /* As bordas das células são colapsadas em uma única borda */
+
 }
 .tabela{
   padding-top: 2rem;
